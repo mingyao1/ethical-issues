@@ -8,8 +8,10 @@ const Question = () => {
 
     const handleOptionClick = (option) => {
         // Replace this with logic to display actual results
+        setSelectedOption(option);
         setResult(`You selected: ${option}`);
     };
+
 
 
     return <>

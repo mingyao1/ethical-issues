@@ -4,8 +4,8 @@ import Question from './Question'
 
 function App() {
   return (
-    <div>
-      <header>
+    <div className='container'>
+      <header className='mt-5'>
         Hello World
       </header>
 
