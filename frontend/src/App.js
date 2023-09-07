@@ -1,17 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Question from './Question'
+import Home from './Home';
+import About from './About';
+import Instructions from './Instructions';
 
 function App() {
   return (
-    <div className='container'>
-      <header className='mt-5'>
-        Hello World
-      </header>
-
-      <Question></Question>
-
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={ <Home/> }/>
+        <Route path='/about' element= { <About/> } />
+        <Route path='/how-to-use' element= { <Instructions/> } />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
