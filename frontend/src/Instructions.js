@@ -23,7 +23,7 @@ const Instructions = () => {
             </nav>
         </header>
         <div>
-            instert instructions here
+            insert instructions here
         </div>
         
     </div>

@@ -8,9 +8,9 @@ const Question = () => {
 
     const handleOptionClick = (option) => {
         // Replace this with logic to display actual results
-        setSelectedOption(option);
+        //setSelectedOption(option);
         //getResult(option, question)
-        setResult(`You selected: ${option}`);
+        setResult(`You selected: ${option}, later it'll call some APIs to provide information about the question`);
     };
 
 
@@ -26,9 +26,15 @@ const Question = () => {
             />
         </div>
         <div className="options">
-            <button className="btn btn-primary btn-block m-2" onClick={() => handleOptionClick('For')}>For</button>
-            <button className="btn btn-danger btn-block m-2" onClick={() => handleOptionClick('Against')}>Against</button>
-            <button className="btn btn-secondary btn-block m-2" onClick={() => handleOptionClick('Neutral')}>Neutral</button>
+            <button className="btn btn-primary btn-block m-2" onClick={() => {
+                setSelectedOption('For');
+                handleOptionClick('For');}}>For</button>
+            <button className="btn btn-danger btn-block m-2" onClick={() => {
+                setSelectedOption('Against');
+                handleOptionClick('Against')}}>Against</button>
+            <button className="btn btn-secondary btn-block m-2" onClick={() => {
+                setSelectedOption('Neutral')
+                handleOptionClick('Neutral')}}>Neutral</button>
         </div>
         <div className="result mt-4">
             <p>{result}</p>
