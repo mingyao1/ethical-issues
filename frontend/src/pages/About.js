@@ -8,7 +8,7 @@ const About = () => {
     return <div className='container'>
     <header className="mt-4 mb-4 text-center">
         <div className="d-flex align-items-center justify-content-between">
-            <h1 className="display-4">Group 1</h1>
+            <h1 className="display-4 text-primary">Group 1</h1>
             <nav className="nav">
                 <ul className="nav nav-pills">
                     <li className="nav-item">

@@ -26,13 +26,14 @@ const Question = () => {
             />
         </div>
         <div className="options">
-            <button className="btn btn-primary btn-block m-2" onClick={() => {
+            See opinions:
+            <button className="btn btn-primary btn-block m-2 col-1" onClick={() => {
                 setSelectedOption('For');
                 handleOptionClick('For');}}>For</button>
-            <button className="btn btn-danger btn-block m-2" onClick={() => {
+            <button className="btn btn-danger btn-block m-2 col-1" onClick={() => {
                 setSelectedOption('Against');
                 handleOptionClick('Against')}}>Against</button>
-            <button className="btn btn-secondary btn-block m-2" onClick={() => {
+            <button className="btn btn-secondary btn-block m-2 col-1" onClick={() => {
                 setSelectedOption('Neutral')
                 handleOptionClick('Neutral')}}>Neutral</button>
         </div>
