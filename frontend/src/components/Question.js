@@ -16,10 +16,14 @@ const Question = () => {
 
 
     return <div className="container text-center">
-        <div className="input-group mb-4 mt-5">
+        <div className="input-group mb-4 mt-5 text-center">
             <input
                 type="text"
                 className="form-control"
+                style={{
+                    height: '3rem',
+                    maxWidth: '80rem',
+                }}
                 placeholder="Enter your ethical question"
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}

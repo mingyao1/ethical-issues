@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import Question from "../components/Question"
 
+import Image from '../media/image2.png'
+
 
 const Home = () => {
     const location = useLocation();
@@ -30,11 +32,19 @@ const Home = () => {
             </header>
 
 
-            <div className="container" style={{ marginTop: '10rem' }}>
+
+            <div className="container mt-3">
+
+                <div className="text-center">
+                    <img src={Image} alt="Logo" className="img img-fluid"
+                        style={{
+                            maxHeight: '50vh'
+                        }} />
+                </div>
                 <Question />
             </div>
 
-            
+
 
         </div>
     </>
