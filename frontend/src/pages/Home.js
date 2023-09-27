@@ -38,7 +38,8 @@ const Home = () => {
                 <div className="text-center">
                     <img src={Image} alt="Logo" className="img img-fluid"
                         style={{
-                            maxHeight: '50vh'
+                            maxHeight: '35vh',
+                            borderRadius: '10%'
                         }} />
                 </div>
                 <Question />
