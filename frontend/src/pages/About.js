@@ -24,9 +24,25 @@ const About = () => {
             </nav>
         </div>
     </header>
-        <div>
-            insert about us here
+    <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mt-3 border-0">
+                <div class="card-body">
+                    <h1 class="card-title text-center">Welcome to []</h1>
+                    <p class="card-text">
+                        In a world where moral dilemmas can leave us scratching our heads,
+                        we're here to lend an ear—or rather, a few opinions. Powered by our AI-powered API,
+                        [] is your go-to platform for navigating ethical questions.
+                        Ask away, and you'll receive a curated list of perspectives to help you see every angle of the issue.
+                        From philosophy to pop culture, we've got it all covered.
+                    </p>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
+
         
     </div>
 
