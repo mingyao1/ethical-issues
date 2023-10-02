@@ -14,7 +14,6 @@ app.use(cors());
 
 app.post('/', async (req, res, next) => {
     try {
-        console.log("Thinking...")
         let gpt_prompt = "In one short paragraph or less, answer the following question "
         if      (req.body.position == "for") {
             gpt_prompt += "as if you support the affirmative side"
@@ -30,7 +29,7 @@ app.post('/', async (req, res, next) => {
             res.json({"error": "position should be for, against, or neutral"})
             return
         }
-        gpt_prompt += req.body.question + ". If you are unable to take this position, clearly state so and explain why:\n"
+        gpt_prompt += ":\n" + req.body.question
 
         const chatCompletion = await openai.chat.completions.create({
             messages: [{ role: "user", content: gpt_prompt }],
@@ -38,9 +37,8 @@ app.post('/', async (req, res, next) => {
             // model: "gpt-4",
         });
 
-        const content = chatCompletion.choices[0].message.content
-        console.log(content)
-        res.json({"response": content})
+        const content = chatCompletion.choices[0].message.content;
+        res.json({"response": content});
     }
     catch (error) {
         console.log(error)
