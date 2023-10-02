@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import axios from "axios"
 
 const Question = () => {
 
@@ -6,22 +7,26 @@ const Question = () => {
     const [selectedOption, setSelectedOption] = useState('');
     const [result, setResult] = useState('');
 
-    const handleOptionClick = (option) => {
+    const handleOptionClick = async (option) => {
         // Replace this with logic to display actual results
         //setSelectedOption(option);
         //getResult(option, question)
-        setResult(`You selected: ${option}, later it'll call some APIs to provide information about the question`);
+
+        setResult(`${option}-Man is thinking...`);
+        const { data } = await axios.post("http://localhost:4000/", {
+            "position": option.toLowerCase(),
+            "question": question,
+        });
+        setResult(`${option}-Man says: ${data.response}`);
     };
-
-
 
     return <div className="container text-center">
         <div className="input-group mb-4 mt-5 text-center">
-            <input
+            <textarea
                 type="text"
                 className="form-control"
                 style={{
-                    height: '3rem',
+                    height: '6rem',
                     maxWidth: '80rem',
                 }}
                 placeholder="Enter your ethical question"
